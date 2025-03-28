@@ -1,8 +1,13 @@
+import ProfilePhoto from '../components/ProfilePhoto'
+
 export default function Contact() {
   return (
     <div className="min-h-screen flex flex-col items-center p-8">
       <main className="w-full max-w-2xl">
-        <h1 className="text-4xl font-bold mb-12">Contact</h1>
+        <div className="flex flex-col items-center mb-12 gap-4">
+          <ProfilePhoto />
+          <h1 className="text-4xl font-bold">Contact</h1>
+        </div>
 
         <div className="flex flex-col gap-12">
           <section>

@@ -1,5 +1,5 @@
-import Image from 'next/image'
 import Link from 'next/link'
+import ProfilePhoto from './components/ProfilePhoto'
 
 export default function Home() {
   return (
@@ -11,15 +11,7 @@ export default function Home() {
           </span>
           <h1 className="text-5xl font-bold">David Ernst</h1>
         </div>
-        <div className="relative w-48 h-48 rounded-full overflow-hidden">
-          <Image
-            src="/david_400x400.jpg"
-            alt="David Ernst"
-            fill
-            className="object-cover"
-            priority
-          />
-        </div>
+        <ProfilePhoto />
       </main>
       <nav className="sm:mt-32 mt-16 flex sm:gap-16 gap-8 text-lg">
         <Link href="/writing" className="hover:underline underline-offset-2">
