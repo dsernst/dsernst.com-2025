@@ -3,7 +3,7 @@ import Image from 'next/image'
 export default function Home() {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center p-8">
-      <main className="flex flex-col sm:flex-row items-center gap-8 sm:gap-48 max-w-4xl">
+      <main className="flex flex-col sm:flex-row items-center gap-8 sm:gap-0 sm:justify-between w-full max-w-5xl">
         <div className="flex flex-col items-center sm:items-start gap-2">
           <span className="text-xl text-gray-600 dark:text-gray-300">
             Hi, I&apos;m
