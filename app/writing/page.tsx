@@ -30,7 +30,9 @@ export default async function Writing() {
             .sort(([a], [b]) => Number(b) - Number(a))
             .map(([year, yearPosts]) => (
               <section key={year}>
-                <h2 className="text-2xl font-semibold mb-6">{year}</h2>
+                <h2 className="text-2xl font-semibold mb-6 pl-4 opacity-60">
+                  {year}
+                </h2>
                 <div className="space-y-8">
                   {yearPosts.map((post) => (
                     <article key={post.slug} className="group">
