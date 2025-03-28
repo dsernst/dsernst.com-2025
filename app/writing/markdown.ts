@@ -14,6 +14,19 @@ export type Post = {
   content: string
 }
 
+function generateExcerpt(content: string): string {
+  // Split into paragraphs and take first two
+  const paragraphs = content
+    .split('\n\n')
+    .filter((p) => p.trim().length > 0)
+    .map((p) => p.replace(/^#+ /, ''))
+    .slice(0, 2)
+    .join('\n\n')
+
+  // If we have more content, add ellipsis
+  return paragraphs
+}
+
 export async function getAllPosts(): Promise<Post[]> {
   const fileNames = fs.readdirSync(postsDirectory)
   const allPostsData = await Promise.all(
@@ -38,7 +51,7 @@ export async function getPostBySlug(slug: string): Promise<Post> {
     slug,
     title: data.title,
     date: data.date,
-    excerpt: data.excerpt,
+    excerpt: data.excerpt || generateExcerpt(content),
     content: contentHtml,
   }
 }

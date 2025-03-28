@@ -1,7 +1,6 @@
 ---
 title: Hello World
 date: 2025-03-27
-excerpt: A sample post to test the blog functionality
 ---
 
 This is a sample post to test the blog functionality. It's written in Markdown and will be processed by our blog system.
