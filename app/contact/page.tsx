@@ -44,10 +44,7 @@ export default function Contact() {
 
           {/* Places I post */}
           <section>
-            <h2 className="text-xl font-semibold mb-6">
-              Other places I{' '}
-              <span className="italic opacity-60">occasionally</span> post
-            </h2>
+            <h2 className="text-xl font-semibold mb-6">Other places I post</h2>
             <div className="flex flex-col gap-4">
               <p className="flex items-center gap-2">
                 <FaGithub className="text-xl" />
