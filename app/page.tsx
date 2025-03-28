@@ -9,9 +9,6 @@ export default function Home() {
             Hi, I&apos;m
           </span>
           <h1 className="text-5xl font-bold">David Ernst</h1>
-          <p className="text-lg text-gray-600 dark:text-gray-300 mt-2">
-            Welcome to my personal website
-          </p>
         </div>
         <div className="relative w-48 h-48 rounded-full overflow-hidden">
           <Image
