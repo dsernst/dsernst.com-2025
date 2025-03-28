@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 
 export default function Home() {
   return (
@@ -20,6 +21,17 @@ export default function Home() {
           />
         </div>
       </main>
+      <nav className="sm:mt-32 mt-16 flex sm:gap-16 gap-8 text-lg">
+        <Link href="/writing" className="hover:underline underline-offset-2">
+          Writing
+        </Link>
+        <Link href="/creations" className="hover:underline underline-offset-2">
+          Creations
+        </Link>
+        <Link href="/contact" className="hover:underline underline-offset-2">
+          Contact
+        </Link>
+      </nav>
     </div>
   )
 }
