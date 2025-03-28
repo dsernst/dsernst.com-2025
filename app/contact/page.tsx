@@ -1,5 +1,8 @@
 import ProfilePhoto from '../components/ProfilePhoto'
 import Link from 'next/link'
+import { MdEmail } from 'react-icons/md'
+import { FaGithub, FaTwitter } from 'react-icons/fa'
+import { SiSignal } from 'react-icons/si'
 
 export default function Contact() {
   return (
@@ -16,17 +19,8 @@ export default function Contact() {
           <section>
             <h2 className="text-xl font-semibold mb-6">Get in touch</h2>
             <div className="flex flex-col gap-4 text-gray-600 dark:text-gray-300">
-              <p>
-                Feel free to reach out at{' '}
-                <a
-                  href="mailto:hi@dsernst.com"
-                  className="text-blue-600 dark:text-blue-400 hover:underline"
-                >
-                  hi@dsernst.com
-                </a>
-              </p>
-              <p>
-                Or message me on{' '}
+              <p className="flex items-center gap-2">
+                <SiSignal className="text-lg" />
                 <a
                   href="https://signal.me/#eu/BoJi_hXAgZij8SBK2mGyEoemAKKgZ7_RYOjAOnkgVYCu8IjJAH5EjblXfQ0U3Cbc"
                   target="_blank"
@@ -34,6 +28,16 @@ export default function Contact() {
                   className="text-blue-600 dark:text-blue-400 hover:underline"
                 >
                   Signal
+                </a>{' '}
+                <span className="opacity-70">← Easiest for me</span>
+              </p>
+              <p className="flex items-center gap-2">
+                <MdEmail className="text-xl" />
+                <a
+                  href="mailto:hi@dsernst.com"
+                  className="text-blue-600 dark:text-blue-400 hover:underline"
+                >
+                  hi@dsernst.com
                 </a>
               </p>
             </div>
@@ -46,7 +50,8 @@ export default function Contact() {
               <span className="italic opacity-60">occasionally</span> post
             </h2>
             <div className="flex flex-col gap-4">
-              <p>
+              <p className="flex items-center gap-2">
+                <FaGithub className="text-xl" />
                 <a
                   href="https://github.com/dsernst"
                   target="_blank"
@@ -56,7 +61,8 @@ export default function Contact() {
                   GitHub
                 </a>
               </p>
-              <p>
+              <p className="flex items-center gap-2">
+                <FaTwitter className="text-xl" />
                 <a
                   href="https://twitter.com/dsernst"
                   target="_blank"
