@@ -8,10 +8,9 @@ export default async function Writing() {
 
   // Group posts by year
   const postsByYear = posts.reduce((acc, post) => {
-    const year = new Date(post.date).getFullYear()
-    if (!acc[year]) {
-      acc[year] = []
-    }
+    const year = post.date.getUTCFullYear()
+    if (!acc[year]) acc[year] = []
+
     acc[year].push(post)
     return acc
   }, {} as Record<number, typeof posts>)
@@ -41,9 +40,10 @@ export default async function Writing() {
                             {post.title}
                           </h3>
                           <time className="text-sm text-gray-500 dark:text-gray-400">
-                            {new Date(post.date).toLocaleDateString('en-US', {
+                            {post.date.toLocaleDateString('en-US', {
                               month: 'long',
                               day: 'numeric',
+                              timeZone: 'UTC',
                             })}
                           </time>
                           <div className="mt-2">

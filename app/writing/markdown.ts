@@ -9,7 +9,7 @@ const postsDirectory = path.join(process.cwd(), 'app/writing/posts')
 export type Post = {
   slug: string
   title: string
-  date: string
+  date: Date
   excerpt: string
   content: string
 }
@@ -36,13 +36,14 @@ export async function getAllPosts(): Promise<Post[]> {
     })
   )
 
-  return allPostsData.sort((a, b) => (a.date < b.date ? 1 : -1))
+  return allPostsData.sort((a, b) => b.date.getTime() - a.date.getTime())
 }
 
 export async function getPostBySlug(slug: string): Promise<Post> {
   const fullPath = path.join(postsDirectory, `${slug}.md`)
   const fileContents = fs.readFileSync(fullPath, 'utf8')
   const { data, content } = matter(fileContents)
+  console.log('Frontmatter data:', data)
 
   const processedContent = await remark().use(html).process(content)
   const contentHtml = processedContent.toString()
