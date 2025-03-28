@@ -25,7 +25,7 @@ export default function Contact() {
                 >
                   Signal
                 </a>{' '}
-                <span className="opacity-70">← Easiest for me</span>
+                <span className="opacity-70">← Fastest responses</span>
               </p>
               <p className="flex items-center gap-2">
                 <MdEmail className="text-xl" />
