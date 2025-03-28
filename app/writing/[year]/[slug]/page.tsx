@@ -1,6 +1,6 @@
 import { getPostBySlug } from '../../markdown'
-import ProfilePhoto from '../../../components/ProfilePhoto'
-import BackHome from '../../../components/BackHome'
+import ProfilePhoto from '@/app/components/ProfilePhoto'
+import BackHome from '@/app/components/BackHome'
 
 export default async function Post({
   params,
