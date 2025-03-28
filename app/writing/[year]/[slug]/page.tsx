@@ -1,6 +1,6 @@
 import { getPostBySlug } from '../../markdown'
 import ProfilePhoto from '@/app/components/ProfilePhoto'
-import BackHome from '@/app/components/BackHome'
+import Link from 'next/link'
 
 export default async function Post({
   params,
@@ -32,8 +32,15 @@ export default async function Post({
           dangerouslySetInnerHTML={{ __html: post.content }}
         />
 
-        {/* Back home link */}
-        <BackHome />
+        {/* Link to writings home */}
+        <div className="mt-16 flex justify-center">
+          <Link
+            href="/writing"
+            className="text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100"
+          >
+            ← Back to writings
+          </Link>
+        </div>
       </main>
     </div>
   )
