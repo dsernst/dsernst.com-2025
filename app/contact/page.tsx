@@ -5,7 +5,7 @@ export default function Contact() {
     <div className="min-h-screen flex flex-col items-center p-8">
       <main className="w-full max-w-2xl">
         <div className="flex flex-col items-center mb-12 gap-4">
-          <ProfilePhoto />
+          <ProfilePhoto size="sm" />
           <h1 className="text-4xl font-bold">Contact</h1>
         </div>
 
