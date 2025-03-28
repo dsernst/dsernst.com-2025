@@ -36,18 +36,25 @@ export default async function Writing() {
                   {yearPosts.map((post) => (
                     <article key={post.slug} className="group">
                       <Link href={`/writing/${year}/${post.slug}`}>
-                        <h3 className="text-xl font-semibold group-hover:text-blue-600 dark:group-hover:text-blue-400">
-                          {post.title}
-                        </h3>
-                        <time className="text-sm text-gray-500 dark:text-gray-400">
-                          {new Date(post.date).toLocaleDateString('en-US', {
-                            month: 'long',
-                            day: 'numeric',
-                          })}
-                        </time>
-                        <p className="mt-2 text-gray-600 dark:text-gray-300">
-                          {post.excerpt}
-                        </p>
+                        <div className="p-4 rounded-lg border border-transparent group-hover:border-gray-200 dark:group-hover:border-gray-800 group-hover:bg-gray-50 dark:group-hover:bg-gray-900/50 transition-all">
+                          <h3 className="text-xl font-semibold">
+                            {post.title}
+                          </h3>
+                          <time className="text-sm text-gray-500 dark:text-gray-400">
+                            {new Date(post.date).toLocaleDateString('en-US', {
+                              month: 'long',
+                              day: 'numeric',
+                            })}
+                          </time>
+                          <div className="mt-2">
+                            <p className="text-gray-600 dark:text-gray-300">
+                              {post.excerpt}
+                            </p>
+                            <p className="mt-1 text-sm text-gray-400 dark:text-gray-500">
+                              Read more...
+                            </p>
+                          </div>
+                        </div>
                       </Link>
                     </article>
                   ))}
