@@ -1,6 +1,6 @@
 import Link from 'next/link'
-import ProfilePhoto from '../components/ProfilePhoto'
 import BackHome from '../components/BackHome'
+import PageHeader from '../components/PageHeader'
 import { getAllPosts } from './markdown'
 
 export default async function Writing() {
@@ -18,11 +18,7 @@ export default async function Writing() {
   return (
     <div className="min-h-screen flex flex-col items-center p-8">
       <main className="w-full max-w-2xl">
-        {/* Header */}
-        <div className="flex flex-col items-center mb-12 gap-4">
-          <ProfilePhoto size="sm" />
-          <h1 className="text-4xl font-bold">Writing</h1>
-        </div>
+        <PageHeader title="Writing" />
 
         {/* Posts by year */}
         <div className="space-y-12">

@@ -1,5 +1,5 @@
 import { getPostBySlug } from '../../markdown'
-import ProfilePhoto from '@/app/components/ProfilePhoto'
+import PageHeader from '@/app/components/PageHeader'
 import Link from 'next/link'
 
 export default async function Post({
@@ -8,23 +8,21 @@ export default async function Post({
   params: Promise<{ year: string; slug: string }>
 }) {
   const post = await getPostBySlug((await params).slug)
+  const dateString = new Date(post.date).toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+    timeZone: 'UTC',
+  })
 
   return (
     <div className="min-h-screen flex flex-col items-center p-8">
       <main className="w-full max-w-2xl">
-        {/* Header */}
-        <div className="flex flex-col items-center mb-12 gap-4">
-          <ProfilePhoto size="sm" />
-          <h1 className="text-4xl font-bold">{post.title}</h1>
-          <time className="text-gray-500 dark:text-gray-400">
-            {new Date(post.date).toLocaleDateString('en-US', {
-              year: 'numeric',
-              month: 'long',
-              day: 'numeric',
-              timeZone: 'UTC',
-            })}
-          </time>
-        </div>
+        <PageHeader
+          title={post.title}
+          subtitle={dateString}
+          subtitleClassName="text-sm text-gray-500 dark:text-gray-400"
+        />
 
         {/* Content */}
         <article

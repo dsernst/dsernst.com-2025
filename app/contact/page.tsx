@@ -1,5 +1,5 @@
-import ProfilePhoto from '../components/ProfilePhoto'
 import BackHome from '../components/BackHome'
+import PageHeader from '../components/PageHeader'
 import { MdEmail } from 'react-icons/md'
 import { SiSignal } from 'react-icons/si'
 import { FaGithub, FaTwitter } from 'react-icons/fa'
@@ -8,11 +8,7 @@ export default function Contact() {
   return (
     <div className="min-h-screen flex flex-col items-center p-8">
       <main className="w-full max-w-2xl">
-        {/* Header */}
-        <div className="flex flex-col items-center mb-12 gap-4">
-          <ProfilePhoto size="sm" />
-          <h1 className="text-4xl font-bold">Contact</h1>
-        </div>
+        <PageHeader title="Contact" />
 
         {/* Contact info */}
         <div className="flex flex-col gap-12">

@@ -1,18 +1,14 @@
 import BackHome from '../components/BackHome'
+import PageHeader from '../components/PageHeader'
 
 export default function Creations() {
   return (
     <div className="min-h-screen flex flex-col items-center p-8">
       <main className="w-full max-w-3xl">
-        <div className="flex flex-col gap-2 relative">
-          <div className="absolute -inset-4 bg-gradient-to-r from-blue-100/80 via-indigo-100/80 to-violet-100/80 dark:from-blue-900/40 dark:via-indigo-900/40 dark:to-violet-900/40 blur-2xl rounded-full" />
-          <div className="relative">
-            <h1 className="text-5xl font-bold">Creations</h1>
-            <p className="text-xl text-gray-600 dark:text-gray-300 mt-2">
-              A collection of my projects and work
-            </p>
-          </div>
-        </div>
+        <PageHeader
+          title="Creations"
+          subtitle="A collection of my projects and work"
+        />
 
         <div className="mt-16 grid gap-8">
           {/* Project cards will go here */}
