@@ -18,12 +18,12 @@ function generateExcerpt(content: string): string {
   // Split into paragraphs and take first two
   const paragraphs = content
     .split('\n\n')
-    .filter((p) => p.trim().length > 0)
-    .map((p) => p.replace(/^#+ /, ''))
-    .slice(0, 2)
+    .map((p) => p.trim())
+    .filter((p) => p.length > 0)
+    .map((p) => p.replace(/^#+ /, '')) // Strip leading #s
+    .slice(0, 2) // Take first two paragraphs
     .join('\n\n')
 
-  // If we have more content, add ellipsis
   return paragraphs
 }
 
@@ -43,7 +43,6 @@ export async function getPostBySlug(slug: string): Promise<Post> {
   const fullPath = path.join(postsDirectory, `${slug}.md`)
   const fileContents = fs.readFileSync(fullPath, 'utf8')
   const { data, content } = matter(fileContents)
-  console.log('Frontmatter data:', data)
 
   const processedContent = await remark().use(html).process(content)
   const contentHtml = processedContent.toString()
