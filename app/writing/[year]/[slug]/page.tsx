@@ -5,9 +5,9 @@ import BackHome from '../../../components/BackHome'
 export default async function Post({
   params,
 }: {
-  params: { year: string; slug: string }
+  params: Promise<{ year: string; slug: string }>
 }) {
-  const post = await getPostBySlug(params.slug)
+  const post = await getPostBySlug((await params).slug)
 
   return (
     <div className="min-h-screen flex flex-col items-center p-8">
