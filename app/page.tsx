@@ -20,7 +20,7 @@ export default function Home() {
         <Link href="/writing" className="hover:underline underline-offset-2">
           Writing
         </Link>
-        <Link href="/creations" className="hover:underline underline-offset-2">
+        <Link href="/portfolio" className="hover:underline underline-offset-2">
           Portfolio
         </Link>
         <Link href="/contact" className="hover:underline underline-offset-2">
