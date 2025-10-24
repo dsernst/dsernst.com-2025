@@ -11,7 +11,7 @@ export default function Home() {
             <span className="text-xl text-gray-600 dark:text-gray-300">
               Hi, I&apos;m
             </span>
-            <h1 className="text-5xl font-bold">David Ernst</h1>
+            <h1 className="text-5xl font-bold">David</h1>
           </div>
         </div>
         <ProfilePhoto />
