@@ -21,7 +21,7 @@ export default function Home() {
           Writing
         </Link>
         <Link href="/creations" className="hover:underline underline-offset-2">
-          Creations
+          Portfolio
         </Link>
         <Link href="/contact" className="hover:underline underline-offset-2">
           Contact

@@ -6,8 +6,8 @@ export default function Creations() {
     <div className="min-h-screen flex flex-col items-center p-8">
       <main className="w-full max-w-3xl">
         <PageHeader
-          title="Creations"
-          subtitle="A collection of my projects and work"
+          title="Portfolio"
+          subtitle="Here are some things I've made"
         />
 
         <div className="mt-16 grid gap-8">
