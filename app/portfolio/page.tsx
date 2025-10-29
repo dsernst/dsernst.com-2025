@@ -17,7 +17,7 @@ export default function Creations() {
               key={project}
               className="p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white/50 dark:bg-gray-900/50 backdrop-blur-sm"
             >
-              <h2 className="text-2xl font-semibold">{project}</h2>
+              <h2 className="sm:text-2xl font-semibold">{project}</h2>
             </div>
           ))}
         </div>
