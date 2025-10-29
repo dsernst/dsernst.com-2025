@@ -1,5 +1,5 @@
 ---
-title: Personal Website Goals
+title: New Personal Website Goals
 date: 2025-03-28
 ---
 
