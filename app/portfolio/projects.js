@@ -3,7 +3,7 @@ Fast private verifiable voting — SIV.org
 Fair Deals Tool — deal.dsernst.com
 S.N. Goenka Meditation Timer — GoenkaTimer
 Fair Bet Calculator — bet.dsernst.com
-Favorite Quotes — dsernst.com/quotes
+Favorite Quotes — quotes.dsernst.com
 Verifiable Private Overrides — siv.org/overrides
 Peer-to-peer democratic representation — demo.liquid.us
 Liquid.us Blog — blog.liquid.us
