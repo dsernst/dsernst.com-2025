@@ -12,6 +12,7 @@ export type Post = {
   date: Date
   excerpt: string
   content: string
+  image?: string
 }
 
 function generateExcerpt(content: string): string {
@@ -50,8 +51,9 @@ export async function getPostBySlug(slug: string): Promise<Post> {
   return {
     slug,
     title: data.title,
-    date: data.date,
+    date: new Date(data.date),
     excerpt: data.excerpt || generateExcerpt(content),
     content: contentHtml,
+    image: data.image,
   }
 }

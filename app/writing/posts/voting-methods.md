@@ -1,6 +1,7 @@
 ---
 title: Single-Winner Voting Methods
 date: 2025-12-17
+image: /2025-12-17-voting-methods.png
 ---
 
 Lately, I've been finding a lot of people very enthusiastic about Ranked Choice Voting, without realizing there are even better methods available too.
