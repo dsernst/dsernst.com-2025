@@ -9,7 +9,10 @@ export const projects: Project[] = [
     title: 'Fair Deals Tool — deal.dsernst.com',
     href: 'https://deal.dsernst.com',
   },
-  { title: 'S.N. Goenka Meditation Timer — GoenkaTimer' },
+  {
+    title: 'S.N. Goenka Meditation Timer — GoenkaTimer',
+    href: 'https://apps.apple.com/us/app/goenka-timer/id1494609891',
+  },
   {
     title: 'Fair Bet Calculator — bet.dsernst.com',
     href: 'https://bet.dsernst.com',
