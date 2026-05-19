@@ -2,6 +2,10 @@ export type Project = { title: string; href?: string }
 
 export const projects: Project[] = [
   {
+    title: 'Favorite Quotes — quotes.dsernst.com',
+    href: 'https://quotes.dsernst.com',
+  },
+  {
     title: 'Fast private verifiable voting — SIV.org',
     href: 'https://siv.org',
   },
@@ -16,10 +20,6 @@ export const projects: Project[] = [
   {
     title: 'Fair Bet Calculator — bet.dsernst.com',
     href: 'https://bet.dsernst.com',
-  },
-  {
-    title: 'Favorite Quotes — quotes.dsernst.com',
-    href: 'https://quotes.dsernst.com',
   },
   {
     title: 'Verifiable Private Overrides — siv.org/overrides',
