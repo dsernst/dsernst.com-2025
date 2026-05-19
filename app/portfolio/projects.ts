@@ -6,7 +6,7 @@ export const projects: Project[] = [
     href: 'https://siv.org',
   },
   {
-    title: 'Fair Deals Tool — deal.dsernst.com',
+    title: 'Win-Win Deal Finder — deal.siv.com',
     href: 'https://deal.dsernst.com',
   },
   {
