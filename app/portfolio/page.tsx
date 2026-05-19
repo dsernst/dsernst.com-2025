@@ -1,6 +1,26 @@
 import BackHome from '../components/BackHome'
 import PageHeader from '../components/PageHeader'
-import { unsorted_list_of_projects } from './projects'
+import { projects, type Project } from './projects'
+
+function ProjectCard({
+  project,
+  linked,
+}: {
+  project: Project
+  linked: boolean
+}) {
+  return (
+    <div
+      className={`p-6 rounded-lg border bg-white/50 dark:bg-gray-900/50 backdrop-blur-sm transition-all ${
+        linked
+          ? 'border-transparent group-hover:border-gray-200 dark:group-hover:border-gray-800 group-hover:bg-gray-50 dark:group-hover:bg-gray-900/50 group-active:scale-[0.99] group-active:bg-gray-100 dark:group-active:bg-gray-800/60'
+          : 'border-gray-200 dark:border-gray-800'
+      }`}
+    >
+      <h2 className="sm:text-2xl font-semibold">{project.title}</h2>
+    </div>
+  )
+}
 
 export default function Creations() {
   return (
@@ -12,14 +32,23 @@ export default function Creations() {
         />
 
         <div className="mt-16 grid gap-8">
-          {unsorted_list_of_projects.map((project) => (
-            <div
-              key={project}
-              className="p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white/50 dark:bg-gray-900/50 backdrop-blur-sm"
-            >
-              <h2 className="sm:text-2xl font-semibold">{project}</h2>
-            </div>
-          ))}
+          {projects.map((project) =>
+            project.href ? (
+              <a
+                key={project.title}
+                href={project.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group cursor-pointer"
+              >
+                <ProjectCard project={project} linked />
+              </a>
+            ) : (
+              <div key={project.title}>
+                <ProjectCard project={project} linked={false} />
+              </div>
+            ),
+          )}
         </div>
       </main>
 
