@@ -17,6 +17,16 @@ export type Post = {
   image?: string
 }
 
+function getAllPostFiles(dir: string): string[] {
+  const entries = fs.readdirSync(dir, { withFileTypes: true })
+  return entries.flatMap((entry) => {
+    const fullPath = path.join(dir, entry.name)
+    if (entry.isDirectory()) return getAllPostFiles(fullPath)
+    if (entry.name.endsWith('.md')) return [fullPath]
+    return []
+  })
+}
+
 function generateExcerpt(content: string): string {
   // Split into paragraphs and take first two
   const paragraphs = content
@@ -30,20 +40,8 @@ function generateExcerpt(content: string): string {
   return paragraphs
 }
 
-export async function getAllPosts(): Promise<Post[]> {
-  const fileNames = fs.readdirSync(postsDirectory)
-  const allPostsData = await Promise.all(
-    fileNames.map(async (fileName) => {
-      const slug = fileName.replace(/\.md$/, '')
-      return await getPostBySlug(slug)
-    })
-  )
-
-  return allPostsData.sort((a, b) => b.date.getTime() - a.date.getTime())
-}
-
-export async function getPostBySlug(slug: string): Promise<Post> {
-  const fullPath = path.join(postsDirectory, `${slug}.md`)
+async function getPostFromFile(fullPath: string): Promise<Post> {
+  const slug = path.basename(fullPath, '.md')
   const fileContents = fs.readFileSync(fullPath, 'utf8')
   const { data, content } = matter(fileContents)
 
@@ -65,4 +63,19 @@ export async function getPostBySlug(slug: string): Promise<Post> {
     content: contentHtml,
     image: data.image,
   }
+}
+
+export async function getAllPosts(): Promise<Post[]> {
+  const filePaths = getAllPostFiles(postsDirectory)
+  const allPostsData = await Promise.all(filePaths.map((filePath) => getPostFromFile(filePath)))
+
+  return allPostsData.sort((a, b) => b.date.getTime() - a.date.getTime())
+}
+
+export async function getPostBySlug(slug: string): Promise<Post> {
+  const filePaths = getAllPostFiles(postsDirectory)
+  const fullPath = filePaths.find((p) => path.basename(p, '.md') === slug)
+  if (!fullPath) throw new Error(`Post not found: ${slug}`)
+
+  return getPostFromFile(fullPath)
 }
