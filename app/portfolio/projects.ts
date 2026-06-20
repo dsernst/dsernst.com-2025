@@ -71,6 +71,10 @@ export const projects: Project[] = [
     title: 'RankThings.io/partner edition',
     href: 'https://rankthings.io/partner',
   },
+  {
+    title: 'NightVision vOS app: See in the dark',
+    href: 'https://github.com/dsernst/NightVision',
+  },
   { title: 'Permanent Record for web-based LLM chatbots' },
   { title: 'Personal Freewriting App, with audio feedback' },
   { title: '(For private client) p2p Prediction Markets' },
