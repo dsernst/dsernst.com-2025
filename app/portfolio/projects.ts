@@ -50,6 +50,11 @@ export const projects: Project[] = [
     href: 'https://findshared.siv.org',
   },
   {
+    title:
+      'Seven relationship dimensions — mutual-interest reveal tuned against playing it cool — SamePage.dsernst.com',
+    href: 'https://samepage.dsernst.com',
+  },
+  {
     title: 'Keep 2 VLC Media Players in sync, for watching together — github.com/dsernst/vlc-sync',
     href: 'https://github.com/dsernst/vlc-sync',
   },
