@@ -54,6 +54,10 @@ export const projects: Project[] = [
     href: 'https://github.com/dsernst/vlc-sync',
   },
   {
+    title: 'Simple full-screen stopwatch, easy to press with eyes closed - stopwatch.dsernst.com',
+    href: 'https://stopwatch.dsernst.com',
+  },
+  {
     title:
       'Hedge fund investing hundreds of millions of dollars, run by thousands of anonymous AI models — numer.ai',
     href: 'https://numer.ai',
