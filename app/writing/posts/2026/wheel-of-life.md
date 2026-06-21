@@ -1,13 +1,13 @@
 ---
 title: The Wheel of Life
 date: 2026-06-19
-image: /2026-06-19-wheel-of-life.png
+image: /2026-06-19-wheel-of-life.svg
 excerpt: "There’s this Personal Development concept I’ve long appreciated, called The Wheel of Life:"
 ---
 
 There’s this Personal Development concept I’ve long appreciated, called The Wheel of Life.
 
-<img alt="image of the wheel" src="/2026-06-19-wheel-of-life.png" class="rounded-xl" />
+<img alt="The Wheel of Life diagram showing eight life categories with ten concentric scoring rings" src="/2026-06-19-wheel-of-life.svg" class="rounded-xl" />
 
 ### The simple idea
 
