@@ -63,3 +63,5 @@ And then, hopefully, a few months later, see that it’s improved.
 Another very helpful move is to explicitly ask what’s needed and/or what actions are possible to improve a category’s score from `$CURRENT_VALUE` to `$CURRENT_VALUE_PLUS_ONE`?
 
 If you can write a quick note about that, it can be surprisingly insightful and delightful to come back to find these reminders, months or years later.
+
+**Update (Nov 2026):** Now as an app: [wheel.dsernst.com](https://wheel.dsernst.com)
